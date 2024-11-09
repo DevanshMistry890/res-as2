@@ -13,7 +13,7 @@
 
 <body class="pg-topic">
     <header>
-        <h1>My Interests</h1>
+        <h1>Topic</h1>
     </header>
     <nav>
         <ul>
@@ -24,19 +24,51 @@
         </ul>
     </nav>
     <main>
-        <section>
-            <h2>Section Title</h2>
-            <p>Content of the section.</p>
+        <section class="sc-topic">
+            <h2>Speed Up Data Frame Operations with RAPIDS cuDF</h2>
+
+            <p>A <strong>DataFrame</strong> is a 2D structure used to represent data in a tabular format, commonly used
+                in tools like <strong>pandas</strong> for data analysis. However, as data grows, preprocessing steps
+                like filtering, merging, and aggregation can become time-consuming and resource-intensive.</p>
+
+            <p><strong>cuDF</strong> is part of the RAPIDS suite, designed to accelerate end-to-end data science
+                workflows entirely on GPUs. With a syntax similar to pandas, cuDF makes it easy to switch to GPU-based
+                processing without a steep learning curve.</p>
+
+            <p><strong>The cuDF Advantages</strong></p>
+            <ul>
+                <li><strong>Faster Processing:</strong> Harnesses GPU power to handle larger datasets faster than
+                    pandas.</li>
+                <li><strong>Familiar Syntax:</strong> Uses a pandas-like API, making it easy to adopt.</li>
+                <li><strong>Parallel Operations:</strong> Speeds up tasks like filtering, grouping, and aggregating data
+                    by performing them in parallel.</li>
+            </ul>
+
+            <p><strong>Demo: Speeding Up DataFrame Operations</strong></p>
+
+            <p>I've created a demonstration comparing common operations in <strong>pandas</strong> (CPU) and
+                <strong>cuDF</strong> (GPU). This notebook highlights the performance gains from using cuDF: <a
+                    href="https://github.com/DevanshMistry890/mediumblogging/blob/main/cuDF_speed-up.ipynb"
+                    target="_blank">View the Demo</a>.</p>
+
+            <p><strong>Conclusion</strong></p>
+
+            <p>By using <strong>cuDF</strong>, data scientists can process larger datasets more efficiently with GPU
+                acceleration. If you're interested in speeding up your data preparation or need assistance with
+                GPU-based solutions, feel free to contact me!</p>
+
         </section>
     </main>
     <aside class="aside-tp">
         <h1>Fun Facts</h1>
         <ul>
-            <li>Honey never spoils. Archaeologists have found pots of honey in ancient tombs that are over 3,000 years old.</li>
-            <li>Octopuses have three hearts: two pump blood to the gills, while the third pumps it to the rest of the body.</li>
+            <li>Honey never spoils. Archaeologists have found pots of honey in ancient tombs that are over 3,000 years
+                old.</li>
+            <li>Octopuses have three hearts: two pump blood to the gills, while the third pumps it to the rest of the
+                body.</li>
             <li>A group of flamingos is called a "flamboyance."</li>
             <li>Bananas are berries, but strawberries are not!</li>
-        </ul>        
+        </ul>
     </aside>
     <footer>
         <p> 9000819 | dmistry0819@conestogac.on.ca </p>

@@ -1,5 +1,25 @@
 /* 9000819 Devansh Mistry | Pestal Theme */
-/* base layout styels for wireframe */
+
+/* 
+  Browser Compatibility Testing Information:
+  - Tested in: Mozilla Firefox (Version 132) on Windows 11 (Desktop)
+  - Tested in: Google Chrome (Version 130) on Windows 11 (Desktop)
+  - Tested in: Opera (Version 114) on Windows 11 (Desktop)
+  - Platforms: Desktop (Windows 11), Mobile (Samsung Galaxy, iPad Mini)
+  
+  Layout verified on the latest versions of Firefox, Chrome, and Opera for Windows 11, 
+  as well as mobile browsers for Galaxy and iPad Mini.
+
+  No layout issues detected on any of the platforms. The layout is responsive and functions correctly across all screen sizes.
+  - Tested on mobile browsers: Chrome and Firefox on Samsung Galaxy (works perfect)
+  - Tested on tablet browsers: Safari and Chrome on iPad Mini (works perfect)
+  - No horizontal overflow, broken grid layouts, or other layout issues observed.
+
+  The layout is fully responsive and works as intended across desktop and mobile devices.
+*/
+
+/****************************************************/ 
+/* base layout styels for wireframe (All devices)*/
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -213,7 +233,12 @@ nav a {
     padding-bottom: 3.5vh;
 }
 
+.sc-topic {
+    padding: 2vw;
+    font-size: 1.1rem;
+}
 
+/* for large screens and desktops */
 @media only screen and (min-width: 1200px) {
     body {
         grid-template-rows: auto 1fr auto;
@@ -234,13 +259,13 @@ nav a {
     main {
         grid-row: 2 / 3;
         grid-column: span 2;
-        order: 1;
+        order: 1; /* sets main to left side */
         max-width: 80vw;
     }
 
     nav {
         grid-row: 2 / 3;
-        order: 2;
+        order: 2; /* sets nav to right side */
     }
 
 
@@ -270,18 +295,18 @@ nav a {
     .pg-topic main {
         grid-row: 2 / 3;
         grid-column: span 1;
-        order: 1;
+        order: 1; /* sets main to middle, override */
         max-width: 60vw;
     }
 
     .pg-topic nav {
         grid-row: 2 / 3;
-        order: 2;
+        order: 2;  /* sets nav to right side, override */
     }
 
     .pg-topic .aside-tp {
         grid-row: 2 / 3;
-        order: 0;
+        order: 0; /* sets aside to left side, override */
     }
 }
 
@@ -295,16 +320,16 @@ nav a {
     }
 
     header {
-        order: 1;
+        order: 1; /* sets first */
     }
 
     footer {
-        order: 4;
+        order: 4; /* sets last */
         font-weight: 500;
     }
 
     nav {
-        order: 2;
+        order: 2; /* sets 2nd */
     }
 
     nav a{
@@ -317,7 +342,7 @@ nav a {
 
     main {
         grid-row: span 2;
-        order: 3;
+        order: 3; /* sets 3rd */
         padding: 2vw;
     }
 
@@ -357,16 +382,22 @@ nav a {
 
     .pg-topic main {
         grid-row: span 1;
-        order: 3;
+        order: 3; /* sets 3rd, override */
     }
 
     .pg-topic .aside-tp {
-        order: 4;
+        order: 4; /* sets 4th, override */
         justify-content: center;
     }
 
     .pg-topic footer {
-        order: 5;
+        order: 5; /* sets last, override */
+    }
+
+    .sc-topic ul {
+        list-style: none;
+        margin: 0;
+        padding-inline-start: 0;
     }
 }
 
@@ -391,14 +422,14 @@ nav a {
     main {
         grid-row: 2 / 3;
         grid-column: span 2;
-        order: 1;
+        order: 1; /* sets main to left side */
         max-width: 80vw;
         margin: 1.5vw;
     }
 
     nav {
         grid-row: 2 / 3;
-        order: 2;
+        order: 2; /* sets nav to right side */
     }
 
     nav a {
@@ -441,12 +472,12 @@ nav a {
     .pg-topic main {
         grid-row: 2 / 3;
         grid-column: span 1;
-        order: 1;
+        order: 1; /* sets main to middle, override */
     }
 
     .pg-topic .aside-tp {
         grid-row: 2 / 3;
-        order: 0;
+        order: 0; /* sets aside to left side, override */
     }
 }
 
